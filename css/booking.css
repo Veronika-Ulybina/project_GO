@@ -1,0 +1,328 @@
+
+.booking {
+  background-color: #440f51;
+  padding: 80px 0;
+}
+
+.booking__title {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.book__body {
+  margin-bottom: 40px;
+}
+
+.book__block:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.book__title {
+  margin-bottom: 40px;
+}
+
+.book-hall-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.book-hall-list__item {
+  position: relative;
+  flex: 0 1 250px;
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.book-hall-list__input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.book-hall-list__input:checked {
+  box-shadow: inset 0 0 5px 3px rgba(113, 0, 227, 0.5);
+  border-radius: 8px;
+}
+
+.book__block_narrow {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.entertainment-list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 100px;
+}
+
+.entertainment-list__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 23px;
+}
+
+.entertainment-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.entertainment-content__item {
+  position: relative;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.entertainment-content__input-radio {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.entertainment-content__input-radio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.entertainment-content__input-radio:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.entertainment-content__input-radio:checked:after {
+  opacity: 1;
+}
+
+.entertainment-content__text {
+  padding-left: 39px;
+}
+
+.entertainment-content__checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.entertainment-content__checkbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+
+.entertainment-content__checkbox:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  opacity: 0;
+}
+
+.entertainment-content__checkbox:checked:after {
+  opacity: 1;
+}
+
+.book__title_margin_bottom {
+  margin-bottom: 38px;
+}
+
+.datetime {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.datetime__column-first {
+  flex: 0 1 300px;
+  align-self: flex-end;
+}
+
+.datetime-column__block {
+  display: flex;
+  column-gap: 32px;
+  margin-bottom: 36px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 134px;
+  height: 52px;
+  background-color: #fff;
+}
+
+.dropdown__text {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+}
+
+.dropdown__input {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/section_booking/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+.dropdown__input:hover {
+  box-shadow: inset 0 0 5px 3px rgba(113, 0, 227, 0.5);
+}
+
+.dropdown__input::-webkit-calendar-picker-indicator {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.dropdown__input:focus-visible {
+  outline: none;
+}
+
+.dropdown_large {
+  width: 100%;
+}
+
+.datetime__column-second {
+  flex: 0 1 280px;
+}
+
+.datetime-column__label:not(:last-child) {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.datetime-column__text {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+
+.datetime-column__input {
+  width: 100%;
+  height: 52px;
+}
+
+.datetime-column__input:hover {
+  box-shadow: inset 0 0 5px 3px rgba(113, 0, 227, 0.5);
+}
+
+.datetime-column__input:focus {
+  box-shadow: inset 0 0 5px 3px rgba(113, 0, 227, 0.5);
+}
+
+.datetime-column__input:focus-visible {
+  outline: none;
+  padding-left: 10px;
+}
+
+.datetime__column-third {
+  flex: 0 1 300px;
+}
+
+.book__block-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 300px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #6c0287;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: inset 0 0 5px 3px rgba(113, 0, 227, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

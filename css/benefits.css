@@ -1,0 +1,67 @@
+
+.benefits {
+  padding: 50px 0;
+}
+
+.benefits__title {
+  max-width: 800px;
+  margin: 0 auto 41px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.benefits__list {
+  display: flex;
+  gap: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.benefits__item {
+  flex: 0 1 380px;
+  min-height: 228px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+}
+
+.benefits__item_vr {
+  background-image: url("../img/section_benefits/vr.jpg");
+}
+
+.benefits__item_audio {
+  background-image: url("../img/section_benefits/audio.jpg");
+}
+
+.benefits__item_karaoke {
+  background-image: url("../img/section_benefits/karaoke.jpg");
+}
+
+.benefits__item_desktop {
+  background-image: url("../img/section_benefits/desktop.jpg");
+}
+
+.benefits__item_cinema_services {
+  background-image: url("../img/section_benefits/cinema-services.jpg");
+}
+
+.benefits__item_playstation {
+  background-image: url("../img/section_benefits/playstation.jpg");
+}
+
+.benefits__text {
+  min-height: 56px;
+  margin: auto 0 6px 40px;
+  flex: 0 1 300px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.benefits__text_narrow {
+  flex: 0 1 198px;
+}

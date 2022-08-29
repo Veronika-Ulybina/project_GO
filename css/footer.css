@@ -1,0 +1,26 @@
+
+.footer {
+  background-color: #370A37;
+  padding: 78px 0 10px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.copyright {
+  font-size: 100%;
+}
+
+.footer-block__author {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-block__mail:hover {
+  color: #979faa;
+  transition: all 0.5s ease;
+}

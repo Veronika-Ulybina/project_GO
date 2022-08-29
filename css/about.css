@@ -1,0 +1,87 @@
+
+.about {
+  padding: 50px 0;
+}
+
+.about__title {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-body {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 80px;
+}
+
+.about-body__img {
+  flex: 0 1 600px;
+}
+
+.about-body__content {
+  flex: 0 1 500px;
+}
+
+.about-body__block {
+  margin-bottom: 48px;
+}
+
+.body-block {
+  line-height: 28px;
+}
+
+.body-block__text:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.body-block__text_white_space {
+  white-space: pre-line;
+}
+
+.quote__definition {
+  font-size: 44px;
+  line-height: 50px;
+  text-transform: uppercase;
+  background: url("../img/section_about/quotes.svg") no-repeat;
+  padding-left: 32px;
+  margin-bottom: 39px;
+}
+
+.quote__definition:after {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 27px;
+  background-image: url("../img/section_about/quotes.svg");
+  background-repeat: no-repeat;
+  vertical-align: top;
+  padding-left: 36px;
+  transform: rotate(180deg);
+}
+
+.quote__dfn {
+  display: block;
+  font-style: normal;
+}
+
+.quote__block {
+  max-width: 359px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.quote__img {
+  margin-right: 30px;
+}
+
+.quote__description {
+  line-height: 28px;
+}
