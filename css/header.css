@@ -19,35 +19,47 @@
   flex-wrap: wrap;
 }
 
-.navigation__item:hover {
-  color: #979faa;
-  transition: all 0.5s ease;
-}
-
-.navigation__link {
+.navigation__item {
   font-size: 22px;
   line-height: 50px;
   text-transform: uppercase;
 }
 
-.callback {
-  display: flex;
+.navigation__link:hover {
+  color: #979faa;
+  transition: all 0.5s ease;
+}
+
+.btn-callback {
   flex: 0 1 280px;
+  min-height: 55px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 55px;
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+  background-color: transparent;
+  color: #fff;
   border: 3px solid #cd06ff;
   border-radius: 10px;
 }
 
-.callback:hover {
-  color: #979faa;
-  transition: all 0.5s ease;
+.btn-callback:hover {
+  background-color: #6c0287;
+  border: 3px solid #6c0287;
 }
+
+.btn-callback:focus {
+  background-color: #6c0287;
+}
+
+.btn-callback:active {
+  background: #640aa3;
+}
+
+
 
 

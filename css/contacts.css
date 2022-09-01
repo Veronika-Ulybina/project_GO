@@ -1,6 +1,6 @@
 
 .contacts {
-  background: linear-gradient(180deg, #1B1A1B 0%, #370A37 100%);
+  background: linear-gradient(180deg, #1b1A1b 0%, #370a37 100%);
   padding: 55px 0 78px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .contacts-link:hover {
-  color: #979faa;
+  color: #dfcee4;
   transition: all 0.5s ease;
 }
 
@@ -68,16 +68,14 @@
 }
 
 .social__item {
-  flex: 0 0 50px;
-  height: 50px;
+  flex: 0 0 48px;
+  height: 48px;
 }
 
 .social__link {
-  display: inline-block;
   width: 100%;
   height: 100%;
-  outline: 1px solid transparent;
-  outline-offset: 3px;
+  display: inline-block;
   border-radius: 50%;
   color: #fff;
   transition-property: color, outline-color;
@@ -86,12 +84,23 @@
 }
 
 .social__link:hover {
-  color: #cd06ff;
+  color: #eadeed;
+}
+
+.social__link:focus {
+  color: #eadeed;
+  outline: 1px solid #cd06ff;
+  border-radius: 0;
 }
 
 .social__link:active {
-  outline: 1px solid #840aa3;
-  color: #840aa3;
+  color: #cd06ff;
+  border-radius: 50%;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
 }
 
 .contacts-body__map {
