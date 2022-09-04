@@ -28,6 +28,15 @@
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+
+}
+
+.benefits__item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #979faa;
 }
 
 .benefits__item_vr {

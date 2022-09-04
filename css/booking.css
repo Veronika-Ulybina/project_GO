@@ -64,21 +64,25 @@
   width: 250px;
   height: 55px;
   background-color: #fff;
+  border: 3px solid #fff;
   border-radius: 8px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 }
 
 .book-hall-list__input:hover:before {
-  background: #eadeed;
-  border: 3px solid #640aa3;
+  background-color: #eadeed;
+  border-color: #640aa3;
 }
 
 .book-hall-list__input:focus:before {
-  border: 3px solid #640aa3;
+  border-color: #640aa3;
 }
 
 .book-hall-list__input:active:before {
-  background: #6c0287;
-  border: 3px solid #fff;
+  background-color: #6c0287;
+  border-color: #fff;
 }
 
 .book-hall-list__text {
@@ -146,6 +150,7 @@
 
 .entertainment-content__input-radio:focus {
   outline-color: #cd06ff;
+  transition: outline-color 0.3s ease-in;
 }
 
   .entertainment-content__input-radio:before {
@@ -166,6 +171,7 @@
 
 .entertainment-content__checkbox {
   position: absolute;
+  left: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -177,6 +183,7 @@
 
 .entertainment-content__checkbox:focus {
   outline-color: #cd06ff;
+  transition: outline 0.2s ease-in;
 }
 
 .entertainment-content__checkbox:before {
@@ -185,8 +192,8 @@
   top: 0;
   left: 0;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
 
@@ -235,6 +242,8 @@
   background-image: url("../img/section_booking/triangle.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
+  border: 2px solid #fff;
+  transition: border-color 0.2s ease-in;
 }
 
 .dropdown__input::-webkit-calendar-picker-indicator {
@@ -249,9 +258,8 @@
 }
 
 .dropdown__input:focus {
-  border: 2px solid #cd06ff;
+  border-color: #cd06ff;
 }
-
 
 .dropdown_large {
   width: 100%;
@@ -277,6 +285,8 @@
 .datetime-column__input {
   width: 100%;
   height: 52px;
+  border: 2px solid #fff;
+  transition: border-color 0.2s ease-in;
 }
 
 .datetime-column__input:focus-visible {
@@ -285,7 +295,7 @@
 }
 
 .datetime-column__input:focus {
-  border: 2px solid #cd06ff;
+  border-color: #cd06ff;
 }
 
 .datetime__column-third {
@@ -309,22 +319,26 @@
   text-transform: uppercase;
   color: #6c0287;
   background-color: #fff;
+  border: 3px solid #fff;
   border-radius: 10px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .btn:hover {
-  background: #eadeed;
-  border: 3px solid #6C0287;
+  background-color: #eadeed;
+  border-color: #6c0287;
 }
 
 .btn:focus {
-  background: #fff;
-  border: 3px solid #6c0287;
+  background-color: #fff;
+  border-color: #6c0287;
 }
 
 .btn:active {
   background-color: #eadeed;
-  border: none;
+  border-color: #eadeed;
 }
 
 

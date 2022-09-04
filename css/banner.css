@@ -41,8 +41,8 @@
 }
 
 .banner__box {
-  align-items: flex-end;
   display: flex;
+  align-items: flex-end;
   column-gap: 40px;
   margin-bottom: 150px;
 }
@@ -94,14 +94,12 @@
   text-transform: uppercase;
   background-color: #6c0287;
   color: #fff;
+  box-shadow: 0 0 20px 1px #6c0287;
   border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.button:hover {
-  background-color: #840aa3;
-}
-
-.button:focus {
+.button:hover, .button:focus  {
   background-color: #840aa3;
 }
 
@@ -110,48 +108,79 @@
 }
 
 .main__link {
-  display: inline-block;
-  position: absolute;
-  bottom: 90px;
+  position: relative;
+  bottom: 33px;
   left: 50%;
   z-index: 2;
+  display: inline-block;
   width: 97px;
   height: 97px;
+  outline: 1px solid transparent;
   transform: translate(-50%, 0px);
+  transition: outline-color 0.2s ease-in;
 }
 
-.main__link:hover .check {
-  fill: #6c0287;
+.main__link-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
 
-.main__link:hover .circle {
-  fill: #fff;
+.main__link-fullscreen:before,
+.main__link-fullscreen:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 21px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in;
 }
 
-.main__link:focus .check {
-  fill: #fff;
+.main__link-fullscreen:before {
+  transform: translateX(-81%)  rotate(45deg);
 }
 
-.main__link:focus .circle {
-  stroke: #fff;
-  fill: none;
+.main__link-fullscreen:after {
+  transform: translateX(-16%) rotate(-45deg);
+}
+
+.main__link-fullscreen:hover {
+  background-color: #fff;
+}
+
+.main__link-fullscreen:hover:before, .main__link-fullscreen:hover:after {
+  background-color: #6c0287;
 }
 
 .main__link:focus {
-  outline: 1px solid #CD06FF;
+  outline-color: #cd06ff;
 }
 
-.main__link:active .check {
-  fill: #fff;
-}
-
-.main__link:active .circle {
-  fill: #cd06ff;
-  stroke: #cd06ff;
+.main__link-fullscreen:focus:before, .main__link-fullscreen:focus:after {
+  background-color: #fff;
 }
 
 .main__link:active {
   outline: none;
+}
+
+.main__link-fullscreen:active {
+  background-color: #cd06ff;
+  border-color: #cd06ff;
+}
+
+.main__link-fullscreen:active:before, .main__link-fullscreen:active:after {
+  background-color: #fff;
 }
 
 

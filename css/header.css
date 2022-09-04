@@ -25,9 +25,12 @@
   text-transform: uppercase;
 }
 
+.navigation__link {
+  transition: color 0.4s;
+}
+
 .navigation__link:hover {
   color: #979faa;
-  transition: all 0.5s ease;
 }
 
 .btn-callback {
@@ -45,19 +48,19 @@
   color: #fff;
   border: 3px solid #cd06ff;
   border-radius: 10px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
-.btn-callback:hover {
+.btn-callback:hover, .btn-callback:focus {
   background-color: #6c0287;
-  border: 3px solid #6c0287;
-}
-
-.btn-callback:focus {
-  background-color: #6c0287;
+  border-color: #6c0287;
 }
 
 .btn-callback:active {
-  background: #640aa3;
+  background-color: #640aa3;
+  border-color: #640aa3;
 }
 
 
