@@ -26,15 +26,15 @@
 }
 
 .navigation__link {
-  transition: color 0.4s;
+  transition: color .4s;
 }
 
 .navigation__link:hover {
-  color: #979faa;
+  color: var(--color-purple-light, #dfcee4);
 }
 
 .btn-callback {
-  flex: 0 1 280px;
+  flex-basis: 280px;
   min-height: 55px;
   display: flex;
   justify-content: center;
@@ -45,22 +45,22 @@
   text-transform: uppercase;
   text-align: center;
   background-color: transparent;
-  color: #fff;
-  border: 3px solid #cd06ff;
+  color: var(--color-white);
+  border: 3px solid var(--color-purple-bright, #cd06ff);
   border-radius: 10px;
   transition-property: background-color, border-color;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 
 .btn-callback:hover, .btn-callback:focus {
-  background-color: #6c0287;
-  border-color: #6c0287;
+  background-color: var(--color-purple-dark, #6c0287);
+  border-color: var(--color-purple-dark, #6c0287);
 }
 
 .btn-callback:active {
-  background-color: #640aa3;
-  border-color: #640aa3;
+  background-color: var(--color-lilac, #640aa3);
+  border-color: var(--color-lilac, #640aa3);
 }
 
 

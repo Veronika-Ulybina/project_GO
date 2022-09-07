@@ -14,10 +14,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  font-size: 20px;
   font-weight: 400;
-  background-color: #1b1b1b;
-  color: #fff;
+  font-size: 20px;
+  background-color: var(--bg-color-main, #1b1a1b);
+  color: var(--color-white, #fff);
 }
 
 .page {

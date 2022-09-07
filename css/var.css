@@ -1,0 +1,18 @@
+
+:root {
+  --color-purple-dark: #6c0287;
+  --color-purple: #840aa3;
+  --color-purple-bright: #cd06ff;
+  --color-lilac: #640aa3;
+  --color-purple-light: #dfcee4;
+  --color-white: #fff;
+  --color-black: #000;
+  --bg-footer: #370a37;
+  --bg-color-main: #1b1a1b;
+  --bg-gradient-contacts: linear-gradient(180deg, var(--bg-color-main, #1b1a1b) 0%, var(--bg-footer, #370a37) 100%);
+}
+
+.benefits {
+  --cart-count: 3;
+  --gap: 20px;
+}

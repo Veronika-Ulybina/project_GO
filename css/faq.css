@@ -29,12 +29,16 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  background-color: #440f51;
+  cursor: pointer;
   padding: 0 70px;
 }
 
+.faq-list__item:nth-child(even) {
+  background-color: #440f51;
+}
+
 .faq-list__item:nth-child(odd) {
-  background-color: #fff;
+  background-color: var(--color-white, #fff);
   color: #1c1a1a;
 }
 
@@ -42,83 +46,79 @@
   flex: 0 0 46px;
   height: 46px;
   position: relative;
-  border: 2px solid #fff;
   border-radius: 50%;
-  transition-property: background-color, border-color, transform;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
 }
 
-.faq-list__open:before,
-.faq-list__open:after {
+.faq-list__open_purple {
+  border: 2px solid var(--color-purple-dark, #6c0287);
+}
+
+.faq-list__open_white {
+  border: 2px solid var(--color-white);
+}
+
+.faq-list__open_white:before,
+.faq-list__open_white:after,
+.faq-list__open_purple:before,
+.faq-list__open_purple:after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 20px;
   height: 1px;
-  background-color: #fff;
-  transition-property: background-color, transform;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
 }
 
-.faq-list__open:before {
+.faq-list__open_white:before,
+.faq-list__open_white:after {
+  background-color: var(--color-white);
+}
+
+.faq-list__open_white:before,
+.faq-list__open_purple:before {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.faq-list__open:after {
+.faq-list__open_white:after,
+.faq-list__open_purple:after {
   transform: translate(-50%, -50%);
-}
-
-.faq-list__open_purple {
-  border-color: #6c0287;
 }
 
 .faq-list__open_purple:before,
 .faq-list__open_purple:after {
-  background-color: #6c0287;
+  background-color: var(--color-purple-dark, #6c0287);
 }
 
-.faq-list__open_purple:hover {
-  background-color: #6c0287;
+.faq-list__item:nth-child(even):hover .faq-list__open_white {
+  background-color: var(--color-white);
 }
 
-.faq-list__open_purple:hover:before,
-.faq-list__open_purple:hover:after {
-  background-color: #fff;
+.faq-list__item:nth-child(odd):hover .faq-list__open_purple {
+  background-color: var(--color-purple-dark, #6c0287);
 }
 
-.faq-list__open_purple:active {
-  background-color: transparent;
+.faq-list__item:nth-child(even):hover .faq-list__open_white:before {
+  background-color: var(--color-purple-dark, #6c0287);
 }
 
-.faq-list__open_purple:active:after {
-  background-color: #6c0287;
+.faq-list__item:nth-child(even):hover .faq-list__open_white:after {
+  background-color: var(--color-purple-dark, #6c0287);
 }
 
-.faq-list__open_purple:active:before {
-  transition: 5s;
+.faq-list__item:nth-child(odd):hover .faq-list__open_purple:before {
+  background-color: var(--color-white);
+}
+
+.faq-list__item:nth-child(odd):hover .faq-list__open_purple:after {
+  background-color: var(--color-white);
+}
+
+.faq-list__item:active .faq-list__open_white:before {
   opacity: 0;
 }
 
-.faq-list__open_white:hover {
-  background-color: #fff;
-}
-
-.faq-list__open_white:hover:before,
-.faq-list__open_white:hover:after {
-  background-color: #6c0287;
-}
-
-.faq-list__open_white:active {
-  background-color: transparent;
-}
-
-.faq-list__open_white:active:after {
-  background-color: #fff;
-}
-
-.faq-list__open_white:active:before {
+.faq-list__item:active .faq-list__open_purple:before {
   opacity: 0;
 }
+
+

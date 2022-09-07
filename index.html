@@ -62,14 +62,14 @@
         </div>
 
         <button class="button" type="submit">Забронировать</button>
-        <a class="main__link" href="#"><span class="main__link-fullscreen"></span></a>
+        <a class="main__link" href="#benefits"><span class="main__link-fullscreen"></span></a>
 
       </div>
     </section>
 
     <section class="benefits">
       <div class="container">
-        <h2 class="benefits__title title">У нас есть все для классного отдыха с друзьями!</h2>
+        <h2 class="benefits__title title" id="benefits">У нас есть все для классного отдыха с друзьями!</h2>
 
         <ul class="benefits__list">
           <li class="benefits__item benefits__item_vr"><p class="benefits__text">VR очки</p></li>
@@ -152,25 +152,26 @@
                   <p class="entertainment-list__subtitle">Приставка:</p>
 
                   <div class="entertainment-content">
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__input-radio" type="radio" name="console" value="playstation">
-                      <span class="entertainment-content__text">PlayStation 5</span>
-                    </label>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__input-radio" type="radio" name="console" value="sega">
-                      <span class="entertainment-content__text">Sega Mega Drive</span>
-                    </label>
+                    <div class="entertainment-content__item" >
+                      <input class="entertainment-content__input entertainment-content__input_radio" type="radio" name="console" value="playstation" id="playstation">
+                      <label class="entertainment-content__text" for="playstation">PlayStation 5</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__input-radio" type="radio" name="console" value="x-box">
-                      <span class="entertainment-content__text">X-box One S</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input entertainment-content__input_radio" type="radio" name="console" value="sega" id="sega">
+                      <label class="entertainment-content__text" for="sega">Sega Mega Drive</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__input-radio" type="radio" name="console" value="dendy">
-                      <span class="entertainment-content__text">Dendy</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input entertainment-content__input_radio" type="radio" name="console" value="x-box" id="x-box">
+                      <label class="entertainment-content__text" for="x-box">X-box One S</label>
+                    </div>
+
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input entertainment-content__input_radio" type="radio" name="console" value="dendy" id="dendy">
+                      <label class="entertainment-content__text" for="dendy">Dendy</label>
+                    </div>
 
                   </div>
                 </li>
@@ -180,25 +181,25 @@
 
                   <div class="entertainment-content">
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="jenga" value="yes">
-                      <span class="entertainment-content__text">Jenga</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="jenga" value="yes" id="jenga">
+                      <label class="entertainment-content__text" for="jenga">Jenga</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="monopoly" value="yes">
-                      <span class="entertainment-content__text">Monopoly</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="monopoly" value="yes" id="monopoly">
+                      <label class="entertainment-content__text" for="monopoly">Monopoly</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="munchkin" value="yes">
-                      <span class="entertainment-content__text">Манчкин</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="munchkin" value="yes" id="munchkin">
+                      <label class="entertainment-content__text" for="munchkin">Манчкин</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="alias" value="yes">
-                      <span class="entertainment-content__text">Alias</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="alias" value="yes" id="alias">
+                      <label class="entertainment-content__text" for="alias">Alias</label>
+                    </div>
 
                   </div>
                 </li>
@@ -208,15 +209,15 @@
 
                   <div class="entertainment-content">
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="karaoke" value="yes">
-                      <span class="entertainment-content__text">Караоке</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="karaoke" value="yes" id="karaoke">
+                      <label class="entertainment-content__text" for="karaoke">Караоке</label>
+                    </div>
 
-                    <label class="entertainment-content__item">
-                      <input class="entertainment-content__checkbox" type="checkbox" name="vr" value="yes">
-                      <span class="entertainment-content__text">VR</span>
-                    </label>
+                    <div class="entertainment-content__item">
+                      <input class="entertainment-content__input" type="checkbox" name="vr" value="yes" id="vr">
+                      <label class="entertainment-content__text" for="vr">VR</label>
+                    </div>
 
                   </div>
                 </li>
@@ -403,7 +404,7 @@
 
           <li class="faq-list__item">
             <p>Как получить VIP карту?</p>
-            <span class="faq-list__open faq-list__open_white" aria-hidden="true"></span>
+            <span class="faq-list__open faq-list__open_white"></span>
           </li>
 
           <li class="faq-list__item">

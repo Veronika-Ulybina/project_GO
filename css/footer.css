@@ -1,6 +1,6 @@
 
 .footer {
-  background-color: #370A37;
+  background-color: var(--bg-footer, #370a37);
   padding: 78px 0 10px;
 }
 
@@ -25,5 +25,5 @@
 }
 
 .footer-block__mail:hover {
-  color: #dfcee4;
+  color: var(--color-purple-light, #dfcee4);
 }

@@ -22,7 +22,7 @@
 }
 
 .halls-list__item {
-  flex: 0 1 580px;
+  flex-basis: 580px;
   min-height: 349px;
   background-size: contain;
   display: flex;
@@ -45,7 +45,7 @@
 }
 
 .halls-list__text {
-  flex: 0 1 252px;
+  flex-basis: 252px;
   font-weight: 700;
   font-size: 70px;
   line-height: 80px;

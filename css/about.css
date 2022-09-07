@@ -22,11 +22,11 @@
 }
 
 .about-body__img {
-  flex: 0 1 600px;
+  flex-basis: 600px;
 }
 
 .about-body__content {
-  flex: 0 1 500px;
+  flex-basis: 500px;
 }
 
 .about-body__block {

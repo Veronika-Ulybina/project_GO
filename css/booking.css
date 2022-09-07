@@ -42,7 +42,7 @@
 }
 
 .book-hall-list__item {
-  flex: 0 1 250px;
+  flex-basis: 250px;
   min-height: 55px;
   position: relative;
 }
@@ -63,26 +63,35 @@
   left: 0;
   width: 250px;
   height: 55px;
-  background-color: #fff;
-  border: 3px solid #fff;
+  background-color: var(--color-white, #fff);
+  border: 3px solid var(--color-white, #fff);
   border-radius: 8px;
   transition-property: background-color, border-color;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: linear;
 }
 
 .book-hall-list__input:hover:before {
-  background-color: #eadeed;
-  border-color: #640aa3;
+  background-color: var(--color-purple-light, #dfcee4);
+  border-color: var(--color-lilac, #640aa3);
+}
+
+.book-hall-list__input:checked:before {
+  background-color: var(--color-purple-dark, #6c0287);
+  border-color: var(--color-white, #fff);
+}
+
+.book-hall-list__input:checked + .book-hall-list__text {
+  color: var(--color-white, #fff);
 }
 
 .book-hall-list__input:focus:before {
-  border-color: #640aa3;
+  background-color: var(--color-white, #fff);
+  border-color: var(--color-lilac, #640aa3);
 }
 
-.book-hall-list__input:active:before {
-  background-color: #6c0287;
-  border-color: #fff;
+.book-hall-list__input:focus + .book-hall-list__text {
+  color: var(--color-black, #000);
 }
 
 .book-hall-list__text {
@@ -99,7 +108,8 @@
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-black, #000);
+  transition: color .2s linear;
 }
 
 .book__block_narrow {
@@ -114,7 +124,7 @@
 }
 
 .entertainment-list__column {
-  flex: 0 1 280px;
+  flex-basis: 280px;
 }
 
 .entertainment-list__subtitle {
@@ -132,45 +142,13 @@
 
 .entertainment-content__item {
   position: relative;
-  font-size: 22px;
-  line-height: 25px;
+  display: flex;
+  align-items: center;
 }
 
-  .entertainment-content__input-radio {
-    position: absolute;
-    left: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 27px;
-    height: 27px;
-    outline: 1px solid transparent;
-    outline-offset: 3px;
-  }
-
-.entertainment-content__input-radio:focus {
-  outline-color: #cd06ff;
-  transition: outline-color 0.3s ease-in;
-}
-
-  .entertainment-content__input-radio:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 27px;
-    height: 27px;
-    background-color: #fff;
-    border-radius: 50%;
-  }
-
-.entertainment-content__text {
-  padding-left: 39px;
-}
-
-.entertainment-content__checkbox {
+.entertainment-content__input {
   position: absolute;
+  top: 0;
   left: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -181,20 +159,47 @@
   outline-offset: 3px;
 }
 
-.entertainment-content__checkbox:focus {
-  outline-color: #cd06ff;
-  transition: outline 0.2s ease-in;
+.entertainment-content__input:focus {
+  outline-color: var(--color-purple-bright, #cd06ff);
+  transition: outline-color .3s ease-in;
 }
 
-.entertainment-content__checkbox:before {
+.entertainment-content__input:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--color-white, #fff);
+}
+
+.entertainment-content__input:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-black, #000);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.entertainment-content__input_radio:before,
+.entertainment-content__input_radio:after {
+  border-radius: 50%;
+}
+
+.entertainment-content__input:checked:after {
+  opacity: 1;
+  transition: outline-color .2s ease-in;
+}
+
+.entertainment-content__text {
+  font-size: 22px;
+  line-height: 25px;
+  padding-left: 39px;
 }
 
 .book__title_margin_bottom {
@@ -209,7 +214,7 @@
 }
 
 .datetime__column-first {
-  flex: 0 1 300px;
+  flex-basis: 300px;
   align-self: flex-end;
 }
 
@@ -224,7 +229,7 @@
   display: inline-block;
   width: 134px;
   height: 52px;
-  background-color: #fff;
+  background-color: var(--color-white, #fff);
 }
 
 .dropdown__text {
@@ -242,8 +247,8 @@
   background-image: url("../img/section_booking/triangle.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
-  border: 2px solid #fff;
-  transition: border-color 0.2s ease-in;
+  border: 2px solid var(--color-white, #fff);
+  transition: border-color .2s ease-in;
 }
 
 .dropdown__input::-webkit-calendar-picker-indicator {
@@ -258,7 +263,7 @@
 }
 
 .dropdown__input:focus {
-  border-color: #cd06ff;
+  border-color: var(--color-purple-bright, #cd06ff);
 }
 
 .dropdown_large {
@@ -266,7 +271,7 @@
 }
 
 .datetime__column-second {
-  flex: 0 1 280px;
+  flex-basis: 280px;
 }
 
 .datetime-column__label:not(:last-child) {
@@ -285,8 +290,8 @@
 .datetime-column__input {
   width: 100%;
   height: 52px;
-  border: 2px solid #fff;
-  transition: border-color 0.2s ease-in;
+  border: 2px solid var(--color-white, #fff);
+  transition: border-color .2s ease-in;
 }
 
 .datetime-column__input:focus-visible {
@@ -295,11 +300,11 @@
 }
 
 .datetime-column__input:focus {
-  border-color: #cd06ff;
+  border-color: var(--color-purple-bright, #cd06ff);
 }
 
 .datetime__column-third {
-  flex: 0 1 300px;
+  flex-basis: 300px;
 }
 
 .book__block-btn {
@@ -308,7 +313,7 @@
 }
 
 .btn {
-  flex: 0 1 300px;
+  flex-basis: 300px;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -317,28 +322,28 @@
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #6c0287;
-  background-color: #fff;
-  border: 3px solid #fff;
+  color: var(--color-purple-dark, #6c0287);
+  background-color: var(--color-white, #fff);
+  border: 3px solid var(--color-white, #fff);
   border-radius: 10px;
   transition-property: background-color, border-color;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 
 .btn:hover {
-  background-color: #eadeed;
-  border-color: #6c0287;
+  background-color: var(--color-purple-light, #dfcee4);
+  border-color: var(--color-purple-dark, #6c0287);
 }
 
 .btn:focus {
-  background-color: #fff;
-  border-color: #6c0287;
+  background-color: var(--color-white, #fff);
+  border-color: var(--color-purple-dark, #6c0287);
 }
 
 .btn:active {
-  background-color: #eadeed;
-  border-color: #eadeed;
+  background-color: var(--color-purple-light, #dfcee4);
+  border-color: var(--color-purple-light, #dfcee4);
 }
 
 
