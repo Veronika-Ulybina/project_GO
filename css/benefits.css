@@ -44,7 +44,7 @@
 
 .benefits__item_audio {
   background-image: url("../img/section_benefits/audio.jpg");
-  transform: translateY(69px);
+  transform: translateY(29px);
 }
 
 .benefits__item_karaoke {
@@ -57,7 +57,7 @@
 
 .benefits__item_cinema_services {
   background-image: url("../img/section_benefits/cinema-services.jpg");
-  transform: translateY(69px);
+  transform: translateY(29px);
 }
 
 .benefits__item_playstation {
