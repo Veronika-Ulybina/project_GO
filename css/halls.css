@@ -4,28 +4,20 @@
 }
 
 .halls__title {
-  margin-bottom: 60px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 46px;
 }
 
 .halls-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(auto, 349px));
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .halls-list__item {
-  flex-basis: 580px;
-  min-height: 349px;
-  background-size: contain;
   display: flex;
+  background-size: cover;
+  background-position: center;
 }
 
 .halls-list__item_vibes {
@@ -52,4 +44,105 @@
   text-transform: uppercase;
   text-align: center;
   margin: auto;
+}
+
+@media (max-width: 1024px) {
+
+  .halls {
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+
+  .halls__container {
+    max-width: 964px;
+  }
+
+  .halls__title {
+    margin-bottom: 36px;
+  }
+
+  .halls-list {
+    grid-template-rows: repeat(2, minmax(auto, 267px));
+    gap: 19px 20px;
+  }
+
+  .halls-list__text {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .halls {
+    padding-top: 30px;
+    padding-bottom: 63px;
+  }
+
+  .halls__container {
+    max-width: 748px;
+  }
+
+  .halls__title {
+    margin-bottom: 35px;
+  }
+
+  .halls-list {
+    grid-template-rows: repeat(2, minmax(auto, 200px));
+    gap: 17px 20px;
+  }
+
+  .halls-list__text {
+    flex-basis: 121px;
+    font-size: 40px;
+    line-height: 50px;
+    padding-top: 22px;
+  }
+}
+
+@media (max-width: 664px) {
+
+  .halls-list__text {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 545px) {
+
+  .halls-list {
+    grid-template-rows: repeat(2, minmax(auto, 155px));
+  }
+}
+
+@media (max-width: 452px) {
+
+  .halls-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 168px);
+  }
+}
+
+@media (max-width: 320px) {
+
+  .halls {
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  .halls__container {
+    max-width: 310px;
+  }
+
+  .halls__title {
+    margin-bottom: 15px;
+  }
+
+  .halls-list {
+    row-gap: 10px;
+  }
+
+  .halls-list__text {
+    padding-top: 0;
+  }
 }

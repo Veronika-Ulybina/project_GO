@@ -1,6 +1,7 @@
 
 .benefits {
-  padding: 50px 0 119px;
+  padding-top: 51px;
+  padding-bottom: 120px;
 }
 
 .benefits__title {
@@ -17,20 +18,24 @@
 }
 
 .benefits__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 380px));
+  grid-template-rows: repeat(2, minmax(auto, 228px));
   gap: 40px 20px;
-  flex-wrap: wrap;
 }
 
 .benefits__item {
-  flex-basis: calc(100% / var(--cart-count) - ((var(--cart-count) - 1) * var(--gap)) / var(--cart-count));
-  min-height: 228px;
+  display: grid;
+  align-content: end;
+  grid-template-columns: minmax(auto, 340px);
+  grid-template-rows: 56px;
   background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
+  background-size: cover;
+  background-position: center;
   transition-property: transform, filter;
   transition-duration: .5s;
   transition-timing-function: ease-out;
+  padding-bottom: 6px;
 }
 
 .benefits__item:hover {
@@ -44,7 +49,7 @@
 
 .benefits__item_audio {
   background-image: url("../img/section_benefits/audio.jpg");
-  transform: translateY(29px);
+  transform: translateY(70px);
 }
 
 .benefits__item_karaoke {
@@ -57,7 +62,7 @@
 
 .benefits__item_cinema_services {
   background-image: url("../img/section_benefits/cinema-services.jpg");
-  transform: translateY(29px);
+  transform: translateY(69px);
 }
 
 .benefits__item_playstation {
@@ -65,14 +70,244 @@
 }
 
 .benefits__text {
-  min-height: 56px;
-  margin: auto 0 6px 40px;
-  flex-basis: 300px;
   font-weight: 700;
   line-height: 28px;
-  padding-bottom: 6px;
+  padding-left: 40px;
 }
 
 .benefits__text_narrow {
-  flex-basis: 198px;
+  max-width: 238px;
+}
+
+@media (max-width: 1128px) {
+
+  .benefits__text {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .benefits {
+    padding-top: 41.5px;
+    padding-bottom: 87px;
+  }
+
+  .benefits__container {
+    max-width: 964px;
+  }
+
+  .benefits__title {
+    max-width: 650px;
+    margin: 0 auto 36px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .benefits__list {
+    grid-template-columns: repeat(3, minmax(auto, 287px));
+    grid-template-rows: repeat(2, minmax(auto, 172px));
+    gap: 30px 22px;
+  }
+
+  .benefits__item {
+    grid-template-columns: minmax(auto, 267px);
+    padding-bottom: 2px;
+  }
+
+  .benefits__item_audio {
+    transform: translateY(53px);
+  }
+
+  .benefits__item_cinema_services {
+    grid-template-rows: 84px;
+    transform: translateY(52px);
+    padding-bottom: 5px;
+  }
+
+  .benefits__text_narrow {
+    max-width: 218px;
+  }
+}
+
+@media (max-width: 949px) {
+
+  .benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(auto, 228px));
+    gap: 20px;
+  }
+
+  .benefits__item:hover {
+    transform: unset;
+    filter: unset;
+  }
+
+  .benefits__item_audio {
+    transform: unset;
+  }
+
+  .benefits__item_cinema_services {
+    transform: unset;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .benefits {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .benefits__container {
+    max-width: 748px;
+  }
+
+  .benefits__title {
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .benefits__list {
+    grid-template-rows: repeat(3, minmax(auto, 200px));
+  }
+
+  .benefits__item {
+    grid-template-columns: minmax(auto, 304px);
+    padding-bottom: 12px;
+  }
+
+  .benefits__item_cinema_services {
+    grid-template-rows: unset;
+    padding-bottom: 12px;
+    padding-right: 12px;
+  }
+
+  .benefits__text {
+    padding-left: 30px;
+  }
+
+  .benefits__text_narrow {
+    max-width: 228px;
+  }
+}
+
+@media (max-width: 664px) {
+
+  .benefits__list {
+    grid-template-rows: repeat(3, minmax(auto, 150px));
+  }
+
+  .benefits__item {
+    padding-bottom: 3px;
+  }
+
+  .benefits__item_cinema_services {
+    padding-bottom: 3px;
+  }
+
+  .benefits__text {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 545px) {
+
+  .benefits__title {
+    max-width: 390px;
+    margin: 0 auto 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .benefits__list {
+    grid-template-rows: repeat(3, minmax(auto, 128px));
+    gap: 10px;
+  }
+
+  .benefits__item {
+    grid-template-columns: minmax(auto, 125px);
+  }
+
+  .benefits__text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .benefits__text_narrow {
+    max-width: 108px;
+  }
+}
+
+@media (max-width: 452px) {
+
+  .benefits {
+    padding-top: 23px;
+    padding-bottom: 15px;
+  }
+
+  .benefits__title {
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .benefits__list {
+    grid-template-rows: repeat(3, minmax(auto, 100px));
+  }
+}
+
+@media (max-width: 320px) {
+
+  .benefits__container {
+    max-width: 310px;
+  }
+
+  .benefits__title {
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .benefits__list {
+    grid-template-rows: repeat(3, minmax(auto, 75px));
+  }
+
+  .benefits__item {
+    padding-bottom: 10px;
+  }
+
+  .benefits__item_karaoke {
+    padding-bottom: 4px;
+  }
+
+  .benefits__item_audio {
+    padding-bottom: 3px;
+  }
+
+  .benefits__item_cinema_services {
+    padding-bottom: 3px;
+  }
+
+  .benefits__text {
+    align-self: center;
+  }
 }

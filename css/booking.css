@@ -1,27 +1,19 @@
 
 .booking {
   background-color: #440f51;
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .booking__title {
-  margin-bottom: 40px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 45px;
 }
 
 .book__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
   margin-bottom: 40px;
-}
-
-.book__block:not(:last-child) {
-  margin-bottom: 60px;
 }
 
 .book-title {
@@ -38,12 +30,11 @@
 .book-hall-list {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
 }
 
 .book-hall-list__item {
   flex-basis: 250px;
-  min-height: 55px;
+  height: 55px;
   position: relative;
 }
 
@@ -112,26 +103,20 @@
   transition: color .2s linear;
 }
 
-.book__block_narrow {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
 .entertainment-list {
-  display: flex;
-  justify-content: space-between;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: minmax(auto, 280px) repeat(2, minmax(auto, 300px));
+  grid-template-rows: auto;
   column-gap: 100px;
-}
-
-.entertainment-list__column {
-  flex-basis: 280px;
+  margin-left: auto;
 }
 
 .entertainment-list__subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 23px;
+  margin-bottom: 26px;
 }
 
 .entertainment-content {
@@ -202,26 +187,26 @@
   padding-left: 39px;
 }
 
-.book__title_margin_bottom {
-  margin-bottom: 38px;
+.book__title_bottom {
+  margin-bottom: 44px;
 }
 
 .datetime {
-  display: flex;
-  justify-content: space-between;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(auto, 300px) minmax(auto, 280px) minmax(auto, 300px);
+  grid-template-rows: repeat(2, 74px);
+  align-items: end;
+  row-gap: 14px;
   column-gap: 50px;
-  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.datetime__column-first {
-  flex-basis: 300px;
-  align-self: flex-end;
-}
-
-.datetime-column__block {
+.datetime__column-datetime {
   display: flex;
   column-gap: 32px;
-  margin-bottom: 36px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .dropdown {
@@ -266,12 +251,18 @@
   border-color: var(--color-purple-bright, #cd06ff);
 }
 
+.datetime__column-people {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
 .dropdown_large {
   width: 100%;
 }
 
-.datetime__column-second {
-  flex-basis: 280px;
+.datetime__column-name {
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
 }
 
 .datetime-column__label:not(:last-child) {
@@ -303,18 +294,31 @@
   border-color: var(--color-purple-bright, #cd06ff);
 }
 
-.datetime__column-third {
-  flex-basis: 300px;
+.datetime__column-surname {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.datetime__column-phone {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.datetime__column-mail {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
 
 .book__block-btn {
-  display: flex;
-  justify-content: flex-end;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(auto, 300px);
+  grid-template-rows: 60px;
+  justify-content: end;
+  margin: 0 auto;
 }
 
 .btn {
-  flex-basis: 300px;
-  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,6 +348,437 @@
 .btn:active {
   background-color: var(--color-purple-light, #dfcee4);
   border-color: var(--color-purple-light, #dfcee4);
+}
+
+@media (max-width: 1141px) {
+
+  .book-hall-list__item {
+    flex-basis: 221px;
+  }
+
+  .book-hall-list__input:before {
+    width: 221px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .booking {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .booking__container {
+    max-width: 964px;
+  }
+
+  .booking__title {
+    margin-bottom: 41px;
+  }
+
+  .book__body {
+    row-gap: 61px;
+    margin-bottom: 50px;
+  }
+
+  .book__title {
+    margin-bottom: 26px;
+  }
+
+  .book-hall-list__item {
+    flex-basis: 180px;
+    height: 44px;
+  }
+
+  .book-hall-list__input:before {
+    width: 180px;
+    height: 44px;
+    border-radius: 6px;
+  }
+
+  .book-hall-list__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .book__block_bottom {
+    margin-bottom: 3px;
+  }
+
+  .entertainment-list {
+    grid-template-columns: minmax(auto, 280px) minmax(auto, 289px) minmax(auto, 255px);
+    column-gap: 40px;
+  }
+
+  .entertainment-list__subtitle {
+    margin-bottom: 23px;
+  }
+
+  .entertainment-content {
+    row-gap: 21px;
+  }
+
+  .datetime {
+    grid-template-columns: minmax(auto, 300px) minmax(auto, 251px) minmax(auto, 254px);
+  }
+
+  .book__block-btn {
+    grid-template-columns: minmax(auto, 254px);
+    grid-template-rows: 50px;
+  }
+
+  .btn {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .book__body {
+    row-gap: 50px;
+    margin-bottom: 48px;
+  }
+
+  .book-hall-list__item {
+    flex-basis: 150px;
+  }
+
+  .book-hall-list__input:before {
+    width: 150px;
+  }
+
+  .book__block_bottom {
+    margin-bottom: 0;
+  }
+
+  .entertainment-list {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 40px;
+    row-gap: 32px;
+  }
+
+  .datetime {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 106px;
+  }
+
+  .datetime__column-datetime {
+    column-gap: unset;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  .datetime__column-people {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-bottom: 28px;
+  }
+
+  .datetime__column-name {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .datetime__column-surname {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .datetime__column-phone {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .datetime__column-mail {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .book__block-btn {
+    max-width: 700px;
+    grid-template-columns: minmax(auto, 300px);
+    grid-template-rows: 60px;
+  }
+
+  .btn {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .booking {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .booking__container {
+    max-width: 748px;
+  }
+
+  .booking__title {
+    margin-bottom: 40px;
+  }
+
+  .book__title {
+    margin-bottom: 30px;
+  }
+
+  .book-hall-list__item {
+    height: 38px;
+  }
+
+  .book-hall-list__input:before {
+    height: 38px;
+  }
+
+  .book-hall-list__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .entertainment-list {
+    grid-template-columns: minmax(auto, 301px) minmax(auto, 321px);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 66px;
+    row-gap: 28px;
+  }
+
+  .entertainment-list__subtitle {
+    margin-bottom: 24px;
+  }
+
+  .entertainment-content__item {
+    height: 40px;
+  }
+
+  .entertainment-content__input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .entertainment-content__text {
+    padding-left: 60px;
+  }
+
+  .entertainment-list__subtitle_additionally {
+    margin-bottom: 23px;
+  }
+
+  .datetime {
+    grid-template-columns: minmax(auto, 280px) minmax(auto, 300px);
+    grid-template-rows: repeat(3, auto);
+    align-items: start;
+  }
+
+  .datetime__column-datetime {
+    margin-bottom: 28px;
+  }
+
+  .datetime__column-people {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 702px) {
+
+  .book-hall-list {
+    max-width: 400px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .book-hall-list__item {
+    flex-basis: 170px;
+  }
+
+  .book-hall-list__input:before {
+    width: 170px;
+  }
+
+  .datetime {
+    column-gap: 50px;
+  }
+}
+
+@media (max-width: 598px) {
+
+  .entertainment-list {
+    column-gap: unset;
+  }
+
+  .entertainment-list__subtitle {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .entertainment-content__item {
+    height: 30px;
+  }
+
+  .entertainment-content__input {
+    width: 30px;
+    height: 30px;
+  }
+
+  .entertainment-content__text {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 50px;
+  }
+
+  .datetime {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 15px;
+  }
+
+  .datetime__column-datetime {
+    justify-content: unset;
+    column-gap: 22px;
+  }
+
+  .datetime__column-people {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+
+  .datetime__column-name {
+    grid-column: 1;
+    grid-row: 3 / 4;
+  }
+
+  .datetime__column-surname {
+    grid-column: 1;
+    grid-row: 4 / 5;
+  }
+
+  .datetime__column-phone {
+    grid-column: 1;
+    grid-row: 5 / 6;
+  }
+
+  .datetime__column-mail {
+    grid-column: 1;
+    grid-row: 6 / 7;
+  }
+}
+
+@media (max-width: 452px) {
+
+  .booking {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .booking__title {
+    margin-bottom: 15px;
+  }
+
+  .book__body {
+    row-gap: 30px;
+    margin-bottom: 35px;
+  }
+
+  .book-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .book__title {
+    margin-bottom: 15px;
+  }
+
+  .book-hall-list {
+    justify-content: center;
+    gap: 14px 20px;
+  }
+
+  .book-hall-list__item {
+    flex-basis: 130px;
+    height: 30px;
+  }
+
+  .book-hall-list__input:before {
+    width: 130px;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  .entertainment-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 25px;
+  }
+
+  .entertainment-list__subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .datetime__column-datetime {
+    column-gap: 12px;
+  }
+
+  .dropdown__text {
+    top: 17px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .book__block-btn {
+    grid-template-columns: minmax(auto, 280px);
+    grid-template-rows: 60px;
+  }
+
+  .btn {
+    font-size: 18px;
+    line-height: 26px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .booking__container {
+    max-width: 310px;
+  }
+
+  .book-hall-list__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .entertainment-content {
+    row-gap: 15px;
+  }
+
+  .entertainment-content_gap {
+    row-gap: 20px;
+  }
+
+  .book__title_bottom {
+    margin-bottom: 24px;
+  }
+
+  .datetime__column-datetime {
+    margin-bottom: 0;
+  }
+
+  .datetime__column-people {
+    margin-bottom: 20px;
+  }
+
+  .datetime__column-surname {
+    margin-bottom: 20px;
+  }
 }
 
 

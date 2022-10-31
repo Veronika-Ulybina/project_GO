@@ -11,8 +11,3 @@
   --bg-color-main: #1b1a1b;
   --bg-gradient-contacts: linear-gradient(180deg, var(--bg-color-main, #1b1a1b) 0%, var(--bg-footer, #370a37) 100%);
 }
-
-.benefits {
-  --cart-count: 3;
-  --gap: 20px;
-}
