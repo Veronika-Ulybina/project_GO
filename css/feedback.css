@@ -83,13 +83,13 @@
   }
 
   .feedback-content {
-    column-gap: 38px;
+    column-gap: 48px;
   }
 
   .feedback-content__block {
-    flex-basis: 172px;
+    flex: 0 0 172px;
     row-gap: 21px;
-    margin-left: 12px;
+    transform: translateX(11px);
   }
 
   .feedback-content__box-img {
@@ -136,7 +136,7 @@
   .feedback-content__block {
     flex-basis: 153px;
     row-gap: 17px;
-    margin-left: 0;
+    transform: unset;
   }
 
   .feedback-content__box-img {

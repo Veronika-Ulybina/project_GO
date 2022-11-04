@@ -217,38 +217,116 @@
   background-color: var(--color-white, #fff);
 }
 
-.dropdown__text {
-  position: absolute;
-  top: 12px;
-  left: 20px;
+.dropdown__input-date {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-size: 18px;
   line-height: 28px;
   color: #211e1e;
+  border: 2px solid var(--color-white, #fff);
 }
 
-.dropdown__input {
-  width: 100%;
-  height: 100%;
+.dropdown__input-date:before {
+  content: 'Дата';
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+  position: absolute;
+  background-color: #fff;
+  min-width: 70px;
+}
+
+.dropdown__input-date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 18px;
+  height: 11.3px;
   background-image: url("../img/section_booking/triangle.svg");
   background-repeat: no-repeat;
-  background-position: right 18px center;
-  border: 2px solid var(--color-white, #fff);
-  transition: border-color .2s ease-in;
+  transform: translateY(-50%);
 }
 
-.dropdown__input::-webkit-calendar-picker-indicator {
+.dropdown__input-date::-webkit-datetime-edit-year-field {
+  display: none;
+}
+
+.dropdown__input-date:focus-visible {
+  outline: none;
+}
+
+.dropdown__input-date:focus {
+  border-color: var(--color-purple-bright, #cd06ff);
+  padding-left: 20px;
+}
+
+.dropdown__input-date:not(:focus) {
+  padding-left: 20px;
+}
+
+.dropdown__input-date:focus:before {
+  width: 0;
+  content: '';
+}
+
+.dropdown__input-date:valid:before {
+  width: 0;
+  content: '';
+}
+
+.dropdown__input-time {
+  position: relative;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+  border: 2px solid var(--color-white, #fff);
 }
 
-.dropdown__input:focus-visible {
+.dropdown__input-time:before {
+  content: 'Время';
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+  position: absolute;
+  background-color: #fff;
+  min-width: 70px;
+}
+
+.dropdown__input-time::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 18px;
+  height: 11.3px;
+  background-image: url("../img/section_booking/triangle.svg");
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.dropdown__input-time:focus-visible {
   outline: none;
-  padding-left: 10px;
 }
 
-.dropdown__input:focus {
+.dropdown__input-time:focus {
   border-color: var(--color-purple-bright, #cd06ff);
+  padding-left: 20px;
+}
+
+.dropdown__input-time:not(:focus) {
+  padding-left: 20px;
+}
+
+.dropdown__input-time:focus:before {
+  width: 0;
+  content: '';
+}
+
+.dropdown__input-time:valid:before {
+  width: 0;
+  content: '';
 }
 
 .datetime__column-people {
@@ -258,6 +336,53 @@
 
 .dropdown_large {
   width: 100%;
+}
+
+.dropdown__input-number {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+  -moz-appearance: textfield;
+  background-image: url("../img/section_booking/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 18px 11.3px;
+  border: 2px solid var(--color-white, #fff);
+  transition: border-color .2s ease-in;
+}
+
+.dropdown__input-number::placeholder {
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
+}
+
+.dropdown__input-number::-webkit-outer-spin-button,
+.dropdown__input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dropdown__input-number::-webkit-calendar-picker-indicator {
+  transform: translate(-13px, -4px);
+  opacity: 1;
+}
+
+.dropdown__input-number:focus-visible {
+  outline: none;
+  padding-left: 10px;
+}
+
+.dropdown__input-number:focus {
+  border-color: var(--color-purple-bright, #cd06ff);
+  padding-left: 20px;
+}
+
+.dropdown__input-number:not(:focus) {
+  padding-left: 20px;
 }
 
 .datetime__column-name {
@@ -281,17 +406,24 @@
 .datetime-column__input {
   width: 100%;
   height: 52px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #211e1e;
   border: 2px solid var(--color-white, #fff);
   transition: border-color .2s ease-in;
 }
 
 .datetime-column__input:focus-visible {
   outline: none;
-  padding-left: 10px;
 }
 
 .datetime-column__input:focus {
   border-color: var(--color-purple-bright, #cd06ff);
+  padding-left: 20px;
+}
+
+.datetime-column__input:not(:focus) {
+  padding-left: 20px;
 }
 
 .datetime__column-surname {
@@ -470,7 +602,7 @@
   .datetime__column-datetime {
     column-gap: unset;
     justify-content: space-between;
-    margin-bottom: 42px;
+    margin-bottom: 28px;
   }
 
   .datetime__column-people {
@@ -574,15 +706,6 @@
   .datetime {
     grid-template-columns: minmax(auto, 280px) minmax(auto, 300px);
     grid-template-rows: repeat(3, auto);
-    align-items: start;
-  }
-
-  .datetime__column-datetime {
-    margin-bottom: 28px;
-  }
-
-  .datetime__column-people {
-    margin-bottom: 28px;
   }
 }
 
@@ -745,10 +868,62 @@
   }
 }
 
+@media (max-width: 341px) {
+
+  .book-hall-list__item {
+    flex-basis: 120px;
+  }
+
+  .book-hall-list__input:before {
+    width: 120px;
+  }
+
+  .datetime__dropdown {
+    width: 124px;
+  }
+
+  .dropdown__input-date:before {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .dropdown__input {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .dropdown__input-time:before {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .dropdown__input-number::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .dropdown__input-number::-webkit-calendar-picker-indicator {
+    transform: translate(-14px, -3px);
+  }
+
+  .datetime-column__input {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 @media (max-width: 320px) {
 
   .booking__container {
     max-width: 310px;
+  }
+
+  .book-hall-list__item {
+    flex-basis: 130px;
+  }
+
+  .book-hall-list__input:before {
+    width: 130px;
   }
 
   .book-hall-list__text {
@@ -770,6 +945,10 @@
 
   .datetime__column-datetime {
     margin-bottom: 0;
+  }
+
+  .datetime__dropdown {
+    width: 134px;
   }
 
   .datetime__column-people {
